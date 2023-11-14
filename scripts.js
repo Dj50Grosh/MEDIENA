@@ -19,11 +19,33 @@ calculateButton.addEventListener('click', () => {
 
 document.getElementById('rasto-ilgis').addEventListener('keyup', (event) => {
     let inputValue = event.target.valueAsNumber
-    if(inputValue < 0) {
+    if(isNaN(inputValue) || inputValue < 0) {
         event.target.classList.add('error')
-        event.target.nextElementSibling.class.add('show')
+        event.target.nextElementSibling.classList.add('show')
     } else {
         event.target.classList.remove('error')
-        event.target.nextElementSibling.class.remove('show')
+        event.target.nextElementSibling.classList.remove('show')
     }
 })
+
+document.getElementById('rasto-plotis').addEventListener('keyup', (event) => {
+    let inputValue = event.target.valueAsNumber
+    if(inputValue < 0) {
+        event.target.classList.add('error')
+        event.target.nextElementSibling.classList.add('show')
+    } else {
+        event.target.classList.remove('error')
+        event.target.nextElementSibling.classList.remove('show')
+    }
+})
+
+let resetMygtukas = document.getElementById('reset')
+
+resetMygtukas.onclick = function() {
+    document.getElementById('rasto-ilgis').valueAsNumber = 0
+    document.getElementById('rasto-plotis').valueAsNumber = 0
+    document.getElementById('rasto-aukstis').valueAsNumber = 0
+    document.getElementById('rastu-kiekis').valueAsNumber = 0
+
+    document.getElementById('results').innerHTML = `<p>Suveskite duomenis į visus aukščiau esančius langelius ir spauskite "Skaičiuoti"</p>`
+}
