@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header class="main-title block-wrapper">
+        <h1>Rastai visiems - atrask savo rastą</h1>
+    </header>
+    <div class="info-wrapper block-wrapper">
+        <h2>Rastų skaičiuoklė</h2>
+        <div id="kaina">
+            <p>Kaina - <span id="kubo-kaina"></span>EUR/m<sup>3</sup></p>
+        </div>
+        <div class="input-wrapper">
+            <label for="rasto-ilgis">Rasto ilgis</label>
+            <input type="number" min="0" step="1" value="0" id="rasto-ilgis">
+            <span class="error">Rasto ilgis turi buti tegiamas</span>
+        </div>
+        <div class="input-wrapper">
+            <label for="rasto-plotis">Rasto plotis</label>
+            <input type="number" min="0" step="1" value="0" id="rasto-plotis">
+            <span class="error2">Rasto plotis turi buti tegiamas</span>
+        </div>
+        <div class="input-wrapper">
+            <label for="rasto aukstis">Rasto aukštis</label>
+            <input type="number" min="0" step="1" value="0" id="rasto-aukstis">
+            <span class="error2">Rasto aukštis turi buti tegiamas</span>
+        </div>
+        <div class="input-wrapper">
+            <label for="rastu-kiekis">Rastų kiekis</label>
+            <input type="number" min="0" step="1" value="0" id="rastu-kiekis">
+            <span class="error2">Rastų kiekis turi buti tegiamas</span>
+        </div>
+        <div class="btn">
+            <button id="calculate">Skaičiuoti</button>
+            <button id="reset">Iš naujo</button>
+        </div>
+    </div>
+    <div class="calc-wrapper block-wrapper">
+        <h2>Skaiciavimai</h2>
+        <div id="results">
+            <p>Suveskite duomenis į visus aukščiau esančius langelius ir spauskite "Skaičiuoti"</p>
+        </div>
+    </div>
+</body>
+</html>
